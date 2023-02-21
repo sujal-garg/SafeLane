@@ -36,7 +36,7 @@ class _MyContributionPageState extends State<MyContributionPage>
       length: 2,
       child: Builder(
         builder: (context) {
-          final TabController tabController = DefaultTabController.of(context)!;
+          final TabController tabController = DefaultTabController.of(context);
           tabController.addListener(() {
             if (!tabController.indexIsChanging) {
               // Your code goes here.

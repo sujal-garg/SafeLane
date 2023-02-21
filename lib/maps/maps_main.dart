@@ -7,10 +7,9 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:custom_marker/marker_icon.dart';
-import 'dart:math' show cos, sqrt, asin;
+
 
 class MapView extends StatefulWidget {
-  // const MapView({super.key});
   const MapView(
       {super.key, required startAddController, required destiAddController});
 
@@ -289,7 +288,7 @@ class _MapViewState extends State<MapView> {
                                                 ),
                                               ],
                                             ),
-                                            Divider(),
+                                            const Divider(),
                                             Row(
                                               children: [
                                                 Text(
@@ -315,7 +314,7 @@ class _MapViewState extends State<MapView> {
                                                 ),
                                               ],
                                             ),
-                                            Divider(),
+                                            const Divider(),
                                             Row(
                                               children: [
                                                 Text(
@@ -341,36 +340,34 @@ class _MapViewState extends State<MapView> {
                                                 ),
                                               ],
                                             ),
-                                            Divider(),
-                                            Container(
-                                              child: Row(
-                                                children: [
-                                                  Text(
-                                                    'By: ',
+                                            const Divider(),
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  'By: ',
+                                                  style: TextStyle(
+                                                      color: Colors
+                                                          .grey.shade900,
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.normal),
+                                                ),
+                                                const SizedBox(width: 10),
+                                                SizedBox(
+                                                  width: Get.width / 1.6,
+                                                  child: Text(
+                                                    querySnapshot.docs[i]
+                                                            ['uploadedBy']
+                                                        .toString(),
                                                     style: TextStyle(
                                                         color: Colors
-                                                            .grey.shade900,
+                                                            .grey.shade700,
                                                         fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.normal),
+                                                        fontWeight: FontWeight
+                                                            .normal),
                                                   ),
-                                                  const SizedBox(width: 10),
-                                                  Container(
-                                                    width: Get.width / 1.6,
-                                                    child: Text(
-                                                      querySnapshot.docs[i]
-                                                              ['uploadedBy']
-                                                          .toString(),
-                                                      style: TextStyle(
-                                                          color: Colors
-                                                              .grey.shade700,
-                                                          fontSize: 16,
-                                                          fontWeight: FontWeight
-                                                              .normal),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ));
