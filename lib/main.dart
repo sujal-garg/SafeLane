@@ -4,8 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:safelane/authentication/google_auth.dart';
-import 'package:safelane/authentication/login.dart';
-import 'authentication/login_page.dart';
 import 'package:safelane/onBoarding/onbording.dart';
 import 'package:safelane/tabs/contribute.dart';
 import 'package:safelane/tabs/home.dart';
