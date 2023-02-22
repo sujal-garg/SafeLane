@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:safelane/authentication/login.dart';
+import 'package:safelane/authentication/google_auth.dart';
 import 'package:safelane/onBoarding/onbordingContents.dart';
 class Onbording extends StatefulWidget {
   const Onbording({Key? key}) : super(key: key);
@@ -68,7 +68,7 @@ int currentIndex=0;
               child: ElevatedButton(
                   onPressed: (){
                     if(currentIndex==Demo_data.length-1){
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> loginScreen()),
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> GoogleAuth()),
                       );
                     }
                     _pageController.nextPage(duration: const Duration(milliseconds: 300), curve: Curves.ease);

@@ -51,18 +51,16 @@ class _GoogleAuthState extends State<GoogleAuth> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Welcome to SafeLane",
-                  style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 28),
-                ),
+                
                 Image.asset(
-                  'assets/images/road.png',
+                  'assets/images/splash.png',
                   width: 200,
                   height: 200,
                 ),
+                
                 SizedBox(
                   width: size.width * 0.8,
-                  height: 60,
+                  height: 50,
                   child: ElevatedButton(
                     onPressed: () async {
                       await signInWithGoogle();
@@ -84,7 +82,7 @@ class _GoogleAuthState extends State<GoogleAuth> {
                         ),
                         const Text(
                           "Login with Google",
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(fontSize: 16),
                         ),
                       ],
                     ),

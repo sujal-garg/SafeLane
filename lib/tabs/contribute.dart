@@ -56,7 +56,6 @@ class _ContributeState extends State<Contribute> {
         child: Center(
           child: Container(
             alignment: Alignment.topLeft,
-            // color: Colors.pink,
             width: size.width * 0.8,
             child: Column(
               children: [
@@ -174,7 +173,7 @@ class _ContributeState extends State<Contribute> {
                   children: [
                     Container(
                         width: size.width,
-                        margin: const EdgeInsets.only(bottom: 10.0),
+                        margin: const EdgeInsets.only(bottom: 5.0),
                         child: const Text("Details")),
                     Container(
                       width: size.width,
@@ -197,7 +196,7 @@ class _ContributeState extends State<Contribute> {
                   ],
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -224,58 +223,60 @@ class _ContributeState extends State<Contribute> {
                 ),
 
                 SizedBox(
-                  height: 30,
+                  height: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       margin: const EdgeInsets.only(right: 20),
-                      color: const Color(0xffDBDBDB),
+                      color: Color.fromARGB(255, 0, 0, 0),
                       width: 80,
-                      height: 5,
+                      height: 2,
                     ),
-                    Text(
-                      "Also",
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.bold,
-                          color: const Color(0xff595959)),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(left: 20),
-                      color: const Color(0xffDBDBDB),
-                      width: 80,
-                      height: 5,
-                    ),
+                    // Text(
+                    //   "Also",
+                    //   style: GoogleFonts.poppins(
+                    //       fontWeight: FontWeight.bold,
+                    //       color: Color.fromARGB(255, 0, 0, 0)),
+                    // ),
+                    // Container(
+                    //   margin: const EdgeInsets.only(left: 20),
+                    //   color: Color.fromARGB(255, 1, 1, 1),
+                    //   width: 80,
+                    //   height: 2,
+                    // ),
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 SizedBox(
                   width: size.width * 0.8,
-                  height: 60,
+                  height: 40,
                   child: OutlinedButton(
                     //button function here
                     onPressed: () {},
-
-                    style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10))),
+                    style: ButtonStyle(
+                    side: MaterialStateProperty.all(BorderSide(
+                        color: Colors.black,
+                        width: 1.0,
+                        style: BorderStyle.solid))),
+                    
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
                           Icons.report,
-                          size: 36,
-                          color: Colors.grey,
+                          size: 32,
+                          color: Colors.black,
                         ),
                         SizedBox(
                           width: 24,
                         ),
                         const Text(
                           "Report to Government",
-                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                          style: TextStyle(fontSize: 16, color: Colors.black),
                         ),
                       ],
                     ),
@@ -290,7 +291,7 @@ class _ContributeState extends State<Contribute> {
   }
 }
 
-List<String> list = <String>['One', 'Two', 'Three', 'Four'];
+List<String> list = <String>['Pothole', 'Open Manhole', 'Other'];
 
 String dropdownValue = list.first;
 

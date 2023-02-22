@@ -2,7 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:safelane/authentication/login.dart';
+import 'package:safelane/authentication/google_auth.dart';
 import 'package:safelane/tabs/profile.dart';
 import 'draggableItemsModel.dart';
 
@@ -54,7 +54,7 @@ class DraggableItems extends StatelessWidget {
               onTap: () {
                 FirebaseAuth.instance.signOut().then((value) {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => loginScreen()));
+                      MaterialPageRoute(builder: (context) => GoogleAuth()));
                 });
               },
               textLabel: 'Log Out',
