@@ -64,11 +64,11 @@ class loginScreen extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (_) => const ForgotPassword()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (_) => const ForgotPassword()),
+                      // );
                     },
                     child: const Text("Forgot Password?"),
                   ),
@@ -167,10 +167,10 @@ class loginScreen extends StatelessWidget {
                 const Text("Create account"),
                 TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => SignUp()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (_) => SignUp()),
+                      // );
                     },
                     child: const Text("Sign Up"))
               ],

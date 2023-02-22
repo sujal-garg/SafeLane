@@ -5,6 +5,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:safelane/authentication/google_auth.dart';
 import 'package:safelane/authentication/login.dart';
+import 'package:safelane/onBoarding/onbording.dart';
+import 'package:safelane/tabs/contribute.dart';
 import 'package:safelane/tabs/home.dart';
 // import 'package:safelane/tabs/home.dart';
 import 'firebase_options.dart';
@@ -31,7 +33,8 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme,
           )),
-      home: const GoogleAuth(),
+      // home: const GoogleAuth(),
+      home: const Contribute(),
     );
   }
 }
