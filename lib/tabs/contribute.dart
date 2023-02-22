@@ -120,27 +120,6 @@ class _ContributeState extends State<Contribute> {
                       margin: const EdgeInsets.only(bottom: 10.0),
                       child: const Text("Upload images"),
                     ),
-                    // InkWell(
-                    //   onTap: () => pickImage(),
-                    //   child: image != null
-                    //       ? Image.file(
-                    //           image!,
-                    //           width: 200,
-                    //           height: 160,
-                    //           fit: BoxFit.cover,
-                    //         )
-                    //       : Container(
-                    //           child: Center(
-                    //             child: Text("Tap to upload image"),
-                    //           ),
-                    //           width: size.width,
-                    //           height: 100,
-                    //           decoration: BoxDecoration(
-                    //             borderRadius: BorderRadius.circular(10),
-                    //             color: Color(0xfff2f2f2),
-                    //           ),
-                    //         ),
-                    // ),
                     InkWell(
                       onTap: (() {
                         pickImage();

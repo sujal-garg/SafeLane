@@ -530,7 +530,7 @@ class _MapViewState extends State<MapView> {
                           Visibility(
                             visible: _placeDistance == null ? false : true,
                             child: Text(
-                              'DISTANCE: $_placeDistance km',
+                              'Distance: $distance KMs.',
                               style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -566,6 +566,7 @@ class _MapViewState extends State<MapView> {
                 ),
               ),
             ),
+            
             SafeArea(
               child: Align(
                 alignment: Alignment.bottomRight,
@@ -594,6 +595,7 @@ class _MapViewState extends State<MapView> {
                             ),
                           );
                         },
+                        
                       ),
                     ),
                   ),

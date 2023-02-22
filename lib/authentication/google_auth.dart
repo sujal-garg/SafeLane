@@ -1,9 +1,16 @@
+// ignore_for_file: use_build_context_synchronously
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:safelane/tabs/home.dart';
+
+
+
 
 class GoogleAuth extends StatefulWidget {
   const GoogleAuth({super.key});
@@ -12,24 +19,35 @@ class GoogleAuth extends StatefulWidget {
   State<GoogleAuth> createState() => _GoogleAuthState();
 }
 
+
 class _GoogleAuthState extends State<GoogleAuth> {
   Future<dynamic> signInWithGoogle() async {
-    FirebaseAuth firebaseAuth = FirebaseAuth.instance;
     final GoogleSignIn googleSignIn = GoogleSignIn();
 
-    final GoogleSignInAccount? googleSignInAccount =
+    final GoogleSignInAccount? account =
         await googleSignIn.signIn();
 
-    if (googleSignInAccount != null) {
+    if (account != null) {
       final GoogleSignInAuthentication googleSignInAuthentication =
-          await googleSignInAccount.authentication;
+          await account.authentication;
       final AuthCredential credential = GoogleAuthProvider.credential(
           accessToken: googleSignInAuthentication.accessToken,
           idToken: googleSignInAuthentication.idToken);
       final UserCredential userCredential =
           await FirebaseAuth.instance.signInWithCredential(credential);
-      print(userCredential.user!.displayName);
+          await saveUser(account);
+      if (kDebugMode) {
+        print(userCredential.user!.displayName);
+      }
     }
+  }
+
+  Future<dynamic> saveUser(GoogleSignInAccount account) async {
+    FirebaseFirestore.instance.collection("users").doc(account.email).set({
+      "email": account.email,
+      "name": account.displayName,
+      "profile pic": account.photoUrl
+    });
   }
 
   @override
@@ -37,27 +55,21 @@ class _GoogleAuthState extends State<GoogleAuth> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
-        // child: ElevatedButton(
-        //   child: const Text('Sign in with Google'),
-        //   onPressed: () async {
-        //     await signInWithGoogle();
-        //     Navigator.pushReplacement(context,
-        //         MaterialPageRoute(builder: (builder) => const HomePage()));
-        //   },
-        // ),
         child: SingleChildScrollView(
-          child: Container(
+          child: SizedBox(
             height: size.height * 0.6,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                
                 Image.asset(
                   'assets/images/splash.png',
                   width: 200,
                   height: 200,
                 ),
-                
+                Text("Welcome to SafeLane.",
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.bold, fontSize: 24),
+                    textAlign: TextAlign.left),
                 SizedBox(
                   width: size.width * 0.8,
                   height: 50,
@@ -77,7 +89,7 @@ class _GoogleAuthState extends State<GoogleAuth> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SvgPicture.asset("assets/icons/google-icon.svg"),
-                        SizedBox(
+                        const SizedBox(
                           width: 24,
                         ),
                         const Text(

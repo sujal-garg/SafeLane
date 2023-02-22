@@ -1,10 +1,9 @@
-// ignore_for_file: file_names
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:safelane/authentication/google_auth.dart';
 import 'package:safelane/tabs/profile.dart';
 import 'draggableItemsModel.dart';
+import 'package:safelane/tabs/aboutus.dart';
 
 class DraggableItems extends StatelessWidget {
   const DraggableItems({Key? key}) : super(key: key);
@@ -46,7 +45,10 @@ class DraggableItems extends StatelessWidget {
               child: const Icon(Icons.notifications),
             ),
             SettingButtons(
-              onTap: () {},
+              onTap: () {Navigator.push(context,
+               MaterialPageRoute(builder: (_)=> const ),);
+
+              },
               textLabel: 'About',
               child: const Icon(Icons.info),
             ),
