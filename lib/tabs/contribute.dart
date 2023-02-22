@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:safelane/controllers/image_controller/image_controller.dart';
 
@@ -201,12 +203,11 @@ class _ContributeState extends State<Contribute> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.black,
-                          elevation: 10,
-                          side: const BorderSide(color: Colors.black)),
                       onPressed: () {},
-                      child: const Text("Cancel"),
+                      child: const Text(
+                        "Cancel",
+                        style: TextStyle(color: Colors.black),
+                      ),
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
@@ -218,9 +219,68 @@ class _ContributeState extends State<Contribute> {
                             image, dropdownValue, detailsTextController.text);
                       },
                       child: const Text("Post"),
-                    )
+                    ),
                   ],
-                )
+                ),
+
+                SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(right: 20),
+                      color: const Color(0xffDBDBDB),
+                      width: 80,
+                      height: 5,
+                    ),
+                    Text(
+                      "Also",
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold,
+                          color: const Color(0xff595959)),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 20),
+                      color: const Color(0xffDBDBDB),
+                      width: 80,
+                      height: 5,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                SizedBox(
+                  width: size.width * 0.8,
+                  height: 60,
+                  child: OutlinedButton(
+                    //button function here
+                    onPressed: () {},
+
+                    style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.report,
+                          size: 36,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 24,
+                        ),
+                        const Text(
+                          "Report to Government",
+                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
