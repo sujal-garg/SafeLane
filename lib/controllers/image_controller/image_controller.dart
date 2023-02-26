@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
@@ -17,6 +18,7 @@ class ImageController extends GetxController {
 
   Future<dynamic> uploadImage(
       File? image, String obstacleType, String detail) async {
+    // ignore: unused_local_variable
     RxString downloadLink = ''.obs;
     final storageInsance = firebaseStorage.ref();
     final user = FirebaseAuth.instance.currentUser;
@@ -55,9 +57,13 @@ class ImageController extends GetxController {
       });
 
       Get.offAll(const HomePage());
-      print('Upload Completed');
+      if (kDebugMode) {
+        print('Upload Completed');
+      }
     } catch (err) {
-      print(err);
+      if (kDebugMode) {
+        print(err);
+      }
     }
   }
 }

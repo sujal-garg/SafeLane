@@ -1,8 +1,11 @@
+// ignore_for_file: file_names
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:safelane/authentication/google_auth.dart';
 import 'package:safelane/tabs/profile.dart';
 import 'draggableItemsModel.dart';
+import 'package:safelane/tabs/about.dart';
 
 class DraggableItems extends StatelessWidget {
   const DraggableItems({Key? key}) : super(key: key);
@@ -43,19 +46,19 @@ class DraggableItems extends StatelessWidget {
               textLabel: 'Notifications',
               child: const Icon(Icons.notifications),
             ),
-            // SettingButtons(
-            //   onTap: () {Navigator.push(context,
-            //    MaterialPageRoute(builder: (_)=> const ),);
+            SettingButtons(
+              onTap: () {Navigator.push(context,
+               MaterialPageRoute(builder: (_)=> const AboutUs()));
 
-            //   },
-            //   textLabel: 'About',
-            //   child: const Icon(Icons.info),
-            // ),
+              },
+              textLabel: 'About',
+              child: const Icon(Icons.info),
+            ),
             SettingButtons(
               onTap: () {
                 FirebaseAuth.instance.signOut().then((value) {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => GoogleAuth()));
+                      MaterialPageRoute(builder: (context) => const GoogleAuth()));
                 });
               },
               textLabel: 'Log Out',

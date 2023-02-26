@@ -1,23 +1,25 @@
+// ignore_for_file: camel_case_types, unused_local_variable, file_names
+
 import 'package:flutter/material.dart';
 
 List activeItems = [
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
   
 ];
 List totalItems = [
-  contributionCard(),
-  contributionCard(),
-  contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
+  const contributionCard(),
 
 ];
 
@@ -30,6 +32,7 @@ class MyContributionPage extends StatefulWidget {
 
 class _MyContributionPageState extends State<MyContributionPage>
     with TickerProviderStateMixin {
+  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return DefaultTabController(
@@ -46,11 +49,11 @@ class _MyContributionPageState extends State<MyContributionPage>
           return Scaffold(
             appBar: AppBar(
               elevation: 0,
-              leading: BackButton(
+              leading: const BackButton(
                 color: Colors.black,
               ),
               centerTitle: true,
-              title: Text(
+              title: const Text(
                 "My Contribution",
                 style: TextStyle(
                   color: Colors.black,
@@ -64,7 +67,7 @@ class _MyContributionPageState extends State<MyContributionPage>
               child: Column(children: [
                 Center(
                   child: CircleAvatar(
-                    backgroundColor: Color(0xffeeeeee),
+                    backgroundColor: const Color(0xffeeeeee),
                     maxRadius: size.width * 0.1,
                     child: Text("${activeItems.length}"),
                   ),
@@ -72,7 +75,7 @@ class _MyContributionPageState extends State<MyContributionPage>
                 SizedBox(
                   height: size.height * 0.03,
                 ),
-                Text(
+                const Text(
                   "Contribution",
                   style: TextStyle(fontSize: 18),
                 ),
@@ -81,18 +84,18 @@ class _MyContributionPageState extends State<MyContributionPage>
                 ),
                 Container(
                   width: size.width * 0.9,
-                  padding: EdgeInsets.all(10.0),
-                  margin: EdgeInsets.only(bottom: 20.0),
+                  padding: const EdgeInsets.all(10.0),
+                  margin: const EdgeInsets.only(bottom: 20.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xffEEEEEE),
+                    color: const Color(0xffEEEEEE),
                   ),
                   child: TabBar(
                     indicator: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(8.0)),
                     labelColor: Colors.blue,
-                    tabs: [
+                    tabs: const [
                       Tab(
                         text: "Active",
                       ),
@@ -106,7 +109,7 @@ class _MyContributionPageState extends State<MyContributionPage>
                   width: size.width,
                   height: size.height,
                   padding: EdgeInsets.only(bottom: size.height*0.4),
-                  child: TabBarView(
+                  child: const TabBarView(
                     children: [ActiveTab(), totalTab()],
                   ),
                 ),
@@ -165,6 +168,8 @@ class _totalTabState extends State<totalTab> {
 }
 
 class contributionCard extends StatelessWidget {
+  const contributionCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -173,7 +178,7 @@ class contributionCard extends StatelessWidget {
         width: size.width * 0.9,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Color(0xffEEEEEE),
+          color: const Color(0xffEEEEEE),
           // boxShadow: [
           //   BoxShadow(
           //     color: Color.fromRGBO(84, 84, 84, 0.25),
@@ -182,8 +187,8 @@ class contributionCard extends StatelessWidget {
           //   ),
           // ],
         ),
-        padding: EdgeInsets.all(30.0),
-        margin: EdgeInsets.only(bottom: 20.0),
+        padding: const EdgeInsets.all(30.0),
+        margin: const EdgeInsets.only(bottom: 20.0),
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -193,13 +198,13 @@ class contributionCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Category",
                     style: TextStyle(
                       fontSize: 14,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Small pit",
                     style: TextStyle(
                       color: Color(0xff7A7A7A),
@@ -208,13 +213,13 @@ class contributionCard extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.02,
                   ),
-                  Text(
+                  const Text(
                     "Location",
                     style: TextStyle(
                       fontSize: 14,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "123 Anywhere Street,\nAny City, States",
                     style: TextStyle(
                       color: Color(0xff7A7A7A),

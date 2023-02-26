@@ -11,6 +11,22 @@ class _ProfileScreenState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+              elevation: 0,
+              leading: const BackButton(
+                color: Colors.black,
+              ),
+              centerTitle: true,
+              title: const Text(
+                "Profile",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+              backgroundColor: const Color(0xFFECEBEB),
+            ),
       backgroundColor: const Color(0xFFECEBEB),
       body: SizedBox(
         width: double.infinity,
@@ -75,31 +91,14 @@ class _ProfileScreenState extends State<Profile> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Text(
-                      "PROFILE",
-                      style: TextStyle(
-                        fontFamily: "Montserrat",
-                        color: Colors.black87,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
                     const SizedBox(
                       height: 25,
                     ),
                     listProfile(Icons.person, "Name", "Sujal Garg"),
+              
                     listProfile(Icons.mail, "Email", "sujalgarg17@gmail.com"),
+
                     listProfile(Icons.phone, "Phone Number", "-"),
-                    listProfile(
-                        Icons.date_range, "Date of Birth", "July 21, 2000"),
-                    // ElevatedButton(
-                    //   onPressed: () {},
-                    //   style: ElevatedButton.styleFrom(
-                    //       backgroundColor: Colors.black,,
-                    //       shape: RoundedRectangleBorder(
-                    //           borderRadius: BorderRadius.circular(10))),
-                    //   child: const Text("Edit Profile"),
-                    // ),
                   ],
                 ),
               ),

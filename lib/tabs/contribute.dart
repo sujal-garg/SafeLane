@@ -1,9 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:safelane/controllers/image_controller/image_controller.dart';
 
@@ -201,7 +199,7 @@ class _ContributeState extends State<Contribute> {
                   ],
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
@@ -209,7 +207,7 @@ class _ContributeState extends State<Contribute> {
                   children: [
                     Container(
                       margin: const EdgeInsets.only(right: 20),
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       width: 80,
                       height: 2,
                     ),
@@ -227,7 +225,7 @@ class _ContributeState extends State<Contribute> {
                     // ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 SizedBox(
@@ -237,14 +235,14 @@ class _ContributeState extends State<Contribute> {
                     //button function here
                     onPressed: () {},
                     style: ButtonStyle(
-                    side: MaterialStateProperty.all(BorderSide(
+                    side: MaterialStateProperty.all(const BorderSide(
                         color: Colors.black,
                         width: 1.0,
                         style: BorderStyle.solid))),
                     
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Icon(
                           Icons.report,
                           size: 32,
@@ -253,7 +251,7 @@ class _ContributeState extends State<Contribute> {
                         SizedBox(
                           width: 24,
                         ),
-                        const Text(
+                        Text(
                           "Report to Government",
                           style: TextStyle(fontSize: 16, color: Colors.black),
                         ),

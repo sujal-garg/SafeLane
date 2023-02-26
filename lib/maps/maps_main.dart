@@ -1,4 +1,7 @@
+// ignore_for_file: library_private_types_in_public_api, unused_field
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:geocoding/geocoding.dart';
@@ -113,7 +116,9 @@ class _MapViewState extends State<MapView> {
       await _getAddress();
       addCurrentLocationMark();
     }).catchError((e) {
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     });
   }
 
@@ -131,7 +136,9 @@ class _MapViewState extends State<MapView> {
         _startAddress = _currentAddress;
       });
     } catch (e) {
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     }
   }
 
@@ -204,7 +211,9 @@ class _MapViewState extends State<MapView> {
       isDistanceLoaded = true;
     });
 
-    print('Distance: $distance KMs.');
+    if (kDebugMode) {
+      print('Distance: $distance KMs.');
+    }
   }
 
   Future<dynamic> showRoute() async {

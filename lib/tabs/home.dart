@@ -5,6 +5,7 @@ import 'package:safelane/maps/maps_main.dart';
 import 'package:safelane/tabs/componentshome/draggableItems.dart';
 import 'package:safelane/tabs/contribute.dart';
 import 'package:safelane/tabs/profile.dart';
+import 'package:safelane/tabs/learn.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -23,6 +24,7 @@ class _HomePageState extends State<HomePage> {
       Home(size: size),
       const Contribute(),
       const Profile(),
+      const Learn()
     ];
 
     return Scaffold(
@@ -155,6 +157,7 @@ class Activities extends StatelessWidget {
               children: [
                 SvgPicture.asset("assets/icons/learning.svg"),
                 const Text("Learn")
+                
               ],
             ),
           ),
