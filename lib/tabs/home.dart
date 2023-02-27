@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:_flutterfire_internals/_flutterfire_internals.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:safelane/cards/myContribution.dart';
 import 'package:safelane/maps/maps_main.dart';
 import 'package:safelane/tabs/componentshome/draggableItems.dart';
 import 'package:safelane/tabs/contribute.dart';
-import 'package:safelane/tabs/profile.dart';
+import 'package:safelane/tabs/profile_home.dart';
 import 'package:safelane/tabs/learn.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,7 +25,7 @@ class _HomePageState extends State<HomePage> {
     final screens = [
       Home(size: size),
       const Contribute(),
-      const Profile(),
+      const Profile_Home(),
       const Learn()
     ];
 
@@ -263,12 +265,9 @@ class _MystackState extends State<Mystack> {
                           fontSize: 16,
                         ),
                       ),
+
                       Text(
-                        "Sujal Garg",
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
+                              QuerySnapshot documentSnapshots),
                     ],
                   ))),
           Positioned(

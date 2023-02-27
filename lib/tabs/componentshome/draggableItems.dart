@@ -6,6 +6,7 @@ import 'package:safelane/authentication/google_auth.dart';
 import 'package:safelane/tabs/profile.dart';
 import 'draggableItemsModel.dart';
 import 'package:safelane/tabs/about.dart';
+import 'package:safelane/tabs/learn.dart';
 
 class DraggableItems extends StatelessWidget {
   const DraggableItems({Key? key}) : super(key: key);
