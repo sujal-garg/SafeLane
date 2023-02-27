@@ -266,8 +266,8 @@ class _MystackState extends State<Mystack> {
                         ),
                       ),
 
-                      Text(
-                              QuerySnapshot documentSnapshots),
+                      // Text(
+                      //         QuerySnapshot documentSnapshots),
                     ],
                   ))),
           Positioned(
