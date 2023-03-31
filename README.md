@@ -1,16 +1,25 @@
-# SafeLane.
+<h1 align="center"> SafeLane. </h1>
+<p align="center">A <b>Google DSC Solution Challenge</b> submission</p>
 
-A new Flutter project.
+<p align="center">SafeLane. - Your Road Safety Companion <br> Safelane. is designed to tackle neglected issue of potholes, open manholes, and other road hazards that can lead to accidents./p>
 
-## Getting Started
+### Video Submission
+You can checkout our video submission on youtube by clicking on the thumbnail below.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Project Info
+The contents in this project follow the following structure, where all views are containerised into screens.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+├───models
+|
+├───screens
+│   ├───OnBoarding
+│   ├───Auth
+│   ├───Home
+│   ├───Map
+│   ├───Contribute
+│   ├───My contributions
+│   └───Profile
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
