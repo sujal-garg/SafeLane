@@ -44,5 +44,5 @@ The contents in this project follow the following structure, where all views are
  
  ### Team Details
  - Team Leader @sujal-garg 
- - Team Member @aaditya-mishra
+ - Team Member @aadityamishraa
  - Team Member @Sauravkumar1812
