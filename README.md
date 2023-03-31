@@ -43,6 +43,6 @@ The contents in this project follow the following structure, where all views are
  - Deeplink is used to mail the details of road obstructions to concerned authorities.
  
  ### Team Details
- - Team Leader @sujal-garg 
- - Team Member @aadityamishraa
- - Team Member @Sauravkumar1812
+ - Team Leader [Sujal Garg](https://github.com/sujal-garg)
+ - Team Member [Aaditya Mishra](https://github.com/aadityamishraa)
+ - Team Member [Saurav Kumar](https://github.com/Sauravkumar1812)
