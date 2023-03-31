@@ -8,7 +8,8 @@
 
 ### Video Submission
 You can checkout our video submission on youtube by clicking on the thumbnail below.
-
+<a href="https://youtu.be/Q3phQIbACpM">
+<img src="https://i9.ytimg.com/vi_webp/Q3phQIbACpM/mqdefault.webp?v=6426f156&sqp=COzjm6EG&rs=AOn4CLBPfb5hM2ntJkB1hAQtx81AZIY4jQ" width="500px">  
 
 ### Project Info
 The contents in this project follow the following structure, where all views are containerised into screens.
