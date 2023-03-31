@@ -1,4 +1,4 @@
-# safelane
+# SafeLane.
 
 A new Flutter project.
 
