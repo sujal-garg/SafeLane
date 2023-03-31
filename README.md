@@ -1,6 +1,7 @@
 
+![header](https://user-images.githubusercontent.com/37442807/229185900-602d35e1-32e5-4953-8e74-3052a42ff419.png)
 
-<img src="safelane screens.jpg" width="100%"/>
+
 <h1 align="center"> SafeLane. </h1>
 <p align="center">A <b>Google DSC Solution Challenge</b> submission</p>
 
