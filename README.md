@@ -47,3 +47,5 @@ The contents in this project follow the following structure, where all views are
  - Team Leader [Sujal Garg](https://github.com/sujal-garg)
  - Team Member [Aaditya Mishra](https://github.com/aadityamishraa)
  - Team Member [Saurav Kumar](https://github.com/Sauravkumar1812)
+ 
+ ------------------------------------
